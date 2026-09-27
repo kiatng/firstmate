@@ -1,0 +1,33 @@
+== LAB=/tmp/fm-lab.7Vhs0Q mode=dangling harness=bash -i
+== config/: keep-ai-trailers
+== spawn output
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /tmp/fm-lab.7Vhs0Q
+warning: /tmp/fm-lab.7Vhs0Q/data/lab-trailers-dangling/launch-brief.md records no ship branch; defaulting to legacy branch fm/lab-trailers-dangling
+warning: /tmp/fm-lab.7Vhs0Q/data/lab-trailers-dangling/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode local-only - confirm its definition of done matches
+notice: lab-trailers-dangling ships mode=local-only while the standing posture for proj is no-mistakes - less rigor than the captain's standing posture; proceed only on a current explicit captain instruction or an intake judgment you can state
+spawned lab-trailers-dangling harness=bash kind=ship mode=local-only yolo=off window=primary:fm-lab-trailers-dangling worktree=/tmp/fm-lab.7Vhs0Q/treehouse/.treehouse/proj-3c18fb/1/proj
+SPAWN_EXIT=0
+== state hooks dir present?
+ls: cannot access '/tmp/fm-lab.7Vhs0Q/state/lab-trailers-dangling.git-hooks': No such file or directory
+== window=primary:fm-lab-trailers-dangling worktree=/tmp/fm-lab.7Vhs0Q/treehouse/.treehouse/proj-3c18fb/1/proj
+== pane process tree argv
+-bash 
+treehouse get 
+/bin/bash 
+bash -i 
+== pane env GIT_CONFIG_*
+== commit object message from pane commit
+feat: live commit
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+== pane capture
+kiat@LivenPC:/tmp/fm-lab.7Vhs0Q/treehouse/.treehouse/proj-3c18fb/1/proj$ . '/tmp/fm-lab-trailers-dangling+23608426077a67d9b2b62ac1afe6fe46f6ab01cc6c81efde925985b74ce5ed62/launch.s1790473490.2086357.49
+07.sh'
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+kiat@LivenPC:/tmp/fm-lab.7Vhs0Q/treehouse/.treehouse/proj-3c18fb/1/proj$ cd /tmp/fm-lab.7Vhs0Q/treehouse/.treehouse/proj-3c18fb/1/proj && printf 'x\n' > f && git add f && git -c user.name=t -c user.em
+ail=t@e commit -q -m 'feat: live commit' -m 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>' && echo COMMITTED
+COMMITTED
+kiat@LivenPC:/tmp/fm-lab.7Vhs0Q/treehouse/.treehouse/proj-3c18fb/1/proj$
+== lab removed: yes

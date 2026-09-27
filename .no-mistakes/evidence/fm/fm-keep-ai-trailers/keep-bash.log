@@ -1,0 +1,32 @@
+== LAB=/tmp/fm-lab.jXfBCZ mode=keep harness=bash -i
+== config/: keep-ai-trailers
+== spawn output
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /tmp/fm-lab.jXfBCZ
+warning: /tmp/fm-lab.jXfBCZ/data/lab-trailers-keep/launch-brief.md records no ship branch; defaulting to legacy branch fm/lab-trailers-keep
+warning: /tmp/fm-lab.jXfBCZ/data/lab-trailers-keep/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode local-only - confirm its definition of done matches
+notice: lab-trailers-keep ships mode=local-only while the standing posture for proj is no-mistakes - less rigor than the captain's standing posture; proceed only on a current explicit captain instruction or an intake judgment you can state
+spawned lab-trailers-keep harness=bash kind=ship mode=local-only yolo=off window=primary:fm-lab-trailers-keep worktree=/tmp/fm-lab.jXfBCZ/treehouse/.treehouse/proj-499fca/1/proj
+SPAWN_EXIT=0
+== state hooks dir present?
+ls: cannot access '/tmp/fm-lab.jXfBCZ/state/lab-trailers-keep.git-hooks': No such file or directory
+== window=primary:fm-lab-trailers-keep worktree=/tmp/fm-lab.jXfBCZ/treehouse/.treehouse/proj-499fca/1/proj
+== pane process tree argv
+-bash 
+treehouse get 
+/bin/bash 
+== pane env GIT_CONFIG_*
+== commit object message from pane commit
+feat: live commit
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+== pane capture
+kiat@LivenPC:/tmp/fm-lab.jXfBCZ/treehouse/.treehouse/proj-499fca/1/proj$ . '/tmp/fm-lab-trailers-keep+3b1680080cc2077158c1f898a984cdd1de649b1b58683e7fb54ad337885112d3/launch.s1790473410.2060027.30510.
+sh'
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+kiat@LivenPC:/tmp/fm-lab.jXfBCZ/treehouse/.treehouse/proj-499fca/1/proj$ cd /tmp/fm-lab.jXfBCZ/treehouse/.treehouse/proj-499fca/1/proj && printf 'x\n' > f && git add f && git -c user.name=t -c user.em
+ail=t@e commit -q -m 'feat: live commit' -m 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>' && echo COMMITTED
+COMMITTED
+kiat@LivenPC:/tmp/fm-lab.jXfBCZ/treehouse/.treehouse/proj-499fca/1/proj$
+== lab removed: yes

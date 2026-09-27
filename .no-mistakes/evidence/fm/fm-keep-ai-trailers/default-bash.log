@@ -1,0 +1,30 @@
+== LAB=/tmp/fm-lab.DX6aJP mode=default harness=bash -i
+== config/: 
+== spawn output
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /tmp/fm-lab.DX6aJP
+warning: /tmp/fm-lab.DX6aJP/data/lab-trailers-default/launch-brief.md records no ship branch; defaulting to legacy branch fm/lab-trailers-default
+warning: /tmp/fm-lab.DX6aJP/data/lab-trailers-default/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode local-only - confirm its definition of done matches
+notice: lab-trailers-default ships mode=local-only while the standing posture for proj is no-mistakes - less rigor than the captain's standing posture; proceed only on a current explicit captain instruction or an intake judgment you can state
+spawned lab-trailers-default harness=bash kind=ship mode=local-only yolo=off window=primary:fm-lab-trailers-default worktree=/tmp/fm-lab.DX6aJP/treehouse/.treehouse/proj-e7322f/1/proj
+SPAWN_EXIT=0
+== state hooks dir present?
+/tmp/fm-lab.DX6aJP/state/lab-trailers-default.git-hooks
+== window=primary:fm-lab-trailers-default worktree=/tmp/fm-lab.DX6aJP/treehouse/.treehouse/proj-e7322f/1/proj
+== pane process tree argv
+-bash 
+treehouse get 
+/bin/bash 
+== pane env GIT_CONFIG_*
+== commit object message from pane commit
+feat: live commit
+
+== pane capture
+kiat@LivenPC:/tmp/fm-lab.DX6aJP/treehouse/.treehouse/proj-e7322f/1/proj$ . '/tmp/fm-lab-trailers-default+d767f40309a7e9cb551172f43ac63502a7153ae9477284c01b6cdba2f8b33ccc/launch.s1790473423.2066151.390
+5.sh'
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+kiat@LivenPC:/tmp/fm-lab.DX6aJP/treehouse/.treehouse/proj-e7322f/1/proj$ cd /tmp/fm-lab.DX6aJP/treehouse/.treehouse/proj-e7322f/1/proj && printf 'x\n' > f && git add f && git -c user.name=t -c user.em
+ail=t@e commit -q -m 'feat: live commit' -m 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>' && echo COMMITTED
+COMMITTED
+kiat@LivenPC:/tmp/fm-lab.DX6aJP/treehouse/.treehouse/proj-e7322f/1/proj$
+== lab removed: yes
