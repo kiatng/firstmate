@@ -1,0 +1,16 @@
+== [keep] keep-ai-trailers=1
+-- --settings JSON in emitted claude launch: --settings '{"feedbackDrafts":"off"}'
+-- core.hooksPath override exported: no
+-- resulting commit message:
+chore: add lab file
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
+
+
+== [default] keep-ai-trailers=0
+-- --settings JSON in emitted claude launch: --settings '{"feedbackDrafts":"off","attribution":{"commit":"","pr":"","sessionUrl":false}}'
+-- core.hooksPath override exported: yes
+-- resulting commit message:
+chore: add lab file
+
+

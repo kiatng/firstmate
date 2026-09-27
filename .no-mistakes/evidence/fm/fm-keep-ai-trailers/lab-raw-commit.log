@@ -1,0 +1,43 @@
+== [default] keep-ai-trailers=0  spawn: spawned trailer-default-z1 harness=git kind=ship mode=local-only yolo=off window=firstmate:fm-trailer-default-z1 worktree=/tmp/fm-lab.LL3cL1/default/wt
+-- emitted pane launch command:
+export COMPACT_ADVISER_DISABLE=1; export GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=core.hooksPath GIT_CONFIG_VALUE_0='/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks'; git commit -q --allow-empty --trailer 'Co-authored-by: Claude Opus 5.5 <noreply@anthropic.com>' --trailer 'Co-authored-by: Cursor <cursoragent@cursor.com>' -m 'feat: lab commit (default)'
+
+-- state/trailer-default-z1.git-hooks present? yes
+-- pane: PANE-EXIT=0
+-- resulting commit message (git log -1 --format=%B):
+feat: lab commit (default)
+
+Project-Hook: ran
+
+
+== [keep] keep-ai-trailers=1  spawn: spawned trailer-keep-z1 harness=git kind=ship mode=local-only yolo=off window=firstmate:fm-trailer-keep-z1 worktree=/tmp/fm-lab.LL3cL1/keep/wt
+-- emitted pane launch command:
+export COMPACT_ADVISER_DISABLE=1; git commit -q --allow-empty --trailer 'Co-authored-by: Claude Opus 5.5 <noreply@anthropic.com>' --trailer 'Co-authored-by: Cursor <cursoragent@cursor.com>' -m 'feat: lab commit (keep)'
+
+-- state/trailer-keep-z1.git-hooks present? no
+-- pane: PANE-EXIT=0
+-- resulting commit message (git log -1 --format=%B):
+feat: lab commit (keep)
+
+Co-authored-by: Claude Opus 5.5 <noreply@anthropic.com>
+Co-authored-by: Cursor <cursoragent@cursor.com>
+Project-Hook: ran
+
+
+== [unreadable-config] exit=1 launched=no
+error: cannot inspect configuration source at /tmp/fm-lab.LL3cL1/deny/home/config/launch-env-allowlist: Permission denied
+rm: cannot remove '/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks/post-rewrite': Permission denied
+rm: cannot remove '/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks/pre-auto-gc': Permission denied
+rm: cannot remove '/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks/post-commit': Permission denied
+rm: cannot remove '/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks/pre-merge-commit': Permission denied
+rm: cannot remove '/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks/pre-commit': Permission denied
+rm: cannot remove '/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks/pre-applypatch': Permission denied
+rm: cannot remove '/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks/post-checkout': Permission denied
+rm: cannot remove '/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks/prepare-commit-msg': Permission denied
+rm: cannot remove '/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks/post-applypatch': Permission denied
+rm: cannot remove '/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks/pre-rebase': Permission denied
+rm: cannot remove '/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks/applypatch-msg': Permission denied
+rm: cannot remove '/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks/sendemail-validate': Permission denied
+rm: cannot remove '/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks/pre-push': Permission denied
+rm: cannot remove '/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks/commit-msg': Permission denied
+rm: cannot remove '/tmp/fm-lab.LL3cL1/default/home/state/trailer-default-z1.git-hooks/post-merge': Permission denied
