@@ -1,0 +1,17 @@
+### default home (no config/keep-ai-trailers) - raw crewmate trailer-default-a1
+pwd=/home/kiat/.treehouse/proj-e70623/1/proj
+GIT_CONFIG_COUNT=1 hooksPath=/tmp/fm-lab.eVN2CE/state/trailer-default-a1.git-hooks
+--- HEAD message ---
+lab commit
+
+DONE
+
+### home with config/keep-ai-trailers - raw crewmate trailer-keep-b2
+pwd=/home/kiat/.treehouse/proj-e70623/2/proj
+GIT_CONFIG_COUNT=unset hooksPath=unset
+--- HEAD message ---
+lab commit
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+DONE

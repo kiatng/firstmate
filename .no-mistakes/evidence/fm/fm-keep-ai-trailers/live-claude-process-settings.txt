@@ -1,0 +1,8 @@
+== claude PID 2287431 cwd=/home/kiat/.treehouse/proj-e70623/3/proj
+--settings {"feedbackDrafts":"off"}
+(no GIT_CONFIG_* in env)
+== claude PID 2295017 cwd=/home/kiat/.treehouse/proj-e70623/4/proj
+--settings {"feedbackDrafts":"off","attribution":{"commit":"","pr":"","sessionUrl":false}}
+GIT_CONFIG_VALUE_0=/tmp/fm-lab.eVN2CE/state/claude-default-d4.git-hooks
+GIT_CONFIG_COUNT=1
+GIT_CONFIG_KEY_0=core.hooksPath
