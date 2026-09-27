@@ -4382,7 +4382,7 @@ EOF
     ;;
   devin)
     if [ "$RAW_LAUNCH" -eq 0 ]; then
-      "$SCRIPT_DIR/fm-devin-config.sh" "$STATE_REAL" "$ID" "$BUSY_GEN" || exit 1
+      FM_KEEP_AI_TRAILERS="$KEEP_AI_TRAILERS" "$SCRIPT_DIR/fm-devin-config.sh" "$STATE_REAL" "$ID" "$BUSY_GEN" || exit 1
     fi
     ;;
   gemini)
