@@ -1249,6 +1249,36 @@ test_keep_ai_trailers_omits_attribution_settings_and_strip_hooks() {
   pass "keep-ai-trailers omits Claude attribution settings and the pane strip hooks"
 }
 
+test_keep_ai_trailers_reaches_secondmate_crew_launches() {
+  local rec sm_rec sm_id crew_id sm out status launch
+  sm_id=profile-keep-attribution-sm-z26
+  crew_id=profile-keep-attribution-crew-z27
+  rec=$(make_spawn_case profile-keep-attribution-primary claude "$sm_id")
+  sm_rec=$(make_spawn_case profile-keep-attribution-sm claude "$crew_id")
+  read_case_record "$rec"
+  : > "$HOME_DIR/config/keep-ai-trailers"
+  sm="${sm_rec#*|}"
+  sm="${sm%%|*}"
+  make_seeded_secondmate_home "$sm" "$sm_id"
+
+  out=$(run_spawn "$HOME_DIR" "$WT_DIR" "$FAKEBIN_DIR" "$LAUNCH_LOG" "$sm_id" "$sm" --secondmate)
+  status=$?
+  expect_code 0 "$status" "secondmate spawn with keep-ai-trailers should succeed"$'\n'"$out"
+  [ -e "$sm/config/keep-ai-trailers" ] || fail "secondmate home did not inherit config/keep-ai-trailers"
+
+  read_case_record "$sm_rec"
+  out=$(run_ship_spawn "$HOME_DIR" "$WT_DIR" "$FAKEBIN_DIR" "$LAUNCH_LOG" "$crew_id" "$PROJ_DIR")
+  status=$?
+  expect_code 0 "$status" "secondmate crew spawn should succeed"$'\n'"$out"
+  launch=$(cat "$LAUNCH_LOG")
+  assert_attribution_policy_absent "$launch" "secondmate crew claude"
+  assert_not_contains "$launch" 'GIT_CONFIG_KEY_0=core.hooksPath' \
+    "secondmate crew launch still overrides the repository hooksPath"
+  [ ! -e "$HOME_DIR/state/$crew_id.git-hooks" ] \
+    || fail "secondmate crew launch installed AI trailer strip hooks"
+  pass "keep-ai-trailers is inherited so a secondmate's crew launch keeps AI trailers"
+}
+
 test_claude_secondmate_launch_carries_the_attribution_policy() {
   local rec id sm out status launch
   id=profile-secondmate-attribution-z23
@@ -1766,6 +1796,7 @@ test_claude_secondmate_launch_omits_task_control_channel_authority
 test_claude_long_launch_is_delivered_intact
 test_claude_crewmate_launch_carries_the_attribution_policy
 test_keep_ai_trailers_omits_attribution_settings_and_strip_hooks
+test_keep_ai_trailers_reaches_secondmate_crew_launches
 test_claude_secondmate_launch_carries_the_attribution_policy
 test_active_dispatch_profile_does_not_block_secondmate_launch
 
