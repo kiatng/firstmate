@@ -1,0 +1,8 @@
+ok - the real kiro busy footer matches the kiro delivery guard in flight
+ok - the real kiro foreground group carries the anchored 'kiro-cli' name and the liveness probe reads it alive
+ok - the ancestry walk reads the live kiro process as 'comm kiro'
+ok - the real kiro worker processed its launch prompt
+ok - the real kiro V2 userPromptSubmit and stop hooks both fire per turn and run their scripts through
+ok - a single Escape cancels the real kiro turn
+ok - /quit stops the real kiro process and prints its resume-id line
+rc=0
